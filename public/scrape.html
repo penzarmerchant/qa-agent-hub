@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QA Agent Hub — Scrape</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="topnav">
+    <div class="brand">QA Agent Hub</div>
+    <nav>
+      <a href="/dashboard.html">Dashboard</a>
+      <a href="/scrape.html" class="active">Scrape</a>
+      <a href="/functional.html">Functional Tests</a>
+      <a href="/issues.html">Issues</a>
+      <a href="/pins.html">Review Pins</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Content Scraper</h1>
+    <p class="muted">Pick a saucedemo user and run the scraper against the inventory page (PLP) and each product page (PDP).</p>
+
+    <div class="card">
+      <label for="user-select">User</label>
+      <select id="user-select"></select>
+      <button id="run-btn" class="btn-primary">Run scrape</button>
+      <div id="status" class="status-line"></div>
+    </div>
+  </main>
+
+  <script src="/js/scrape.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QA Agent Hub — Issues</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="topnav">
+    <div class="brand">QA Agent Hub</div>
+    <nav>
+      <a href="/dashboard.html">Dashboard</a>
+      <a href="/scrape.html">Scrape</a>
+      <a href="/functional.html">Functional Tests</a>
+      <a href="/issues.html" class="active">Issues</a>
+      <a href="/pins.html">Review Pins</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="issues-toolbar">
+      <h1>Issues</h1>
+      <div class="toolbar-actions">
+        <select id="status-filter">
+          <option value="">All statuses</option>
+          <option value="open">Open</option>
+          <option value="fixed">Fixed</option>
+          <option value="resolved">Resolved</option>
+          <option value="closed">Closed</option>
+        </select>
+        <a class="btn-secondary" href="/api/issues/export">Export to Excel</a>
+      </div>
+    </div>
+    <div id="issue-list" class="issue-list"></div>
+  </main>
+
+  <div id="export-modal" class="modal hidden">
+    <div class="modal-box">
+      <h2>Copy for JIRA</h2>
+      <textarea id="export-text" readonly rows="10"></textarea>
+      <div class="modal-actions">
+        <button id="copy-btn" class="btn-primary">Copy to clipboard</button>
+        <button id="close-modal" class="btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/issues.js"></script>
+</body>
+</html>

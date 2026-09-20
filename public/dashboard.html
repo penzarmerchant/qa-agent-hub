@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QA Agent Hub — Dashboard</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="topnav">
+    <div class="brand">QA Agent Hub</div>
+    <nav>
+      <a href="/dashboard.html" class="active">Dashboard</a>
+      <a href="/scrape.html">Scrape</a>
+      <a href="/functional.html">Functional Tests</a>
+      <a href="/issues.html">Issues</a>
+      <a href="/pins.html">Review Pins</a>
+    </nav>
+  </header>
+
+  <main class="container container-wide">
+    <div class="issues-toolbar">
+      <h1>Dashboard</h1>
+      <div class="toolbar-actions">
+        <label for="status-filter" class="filter-label">Breakdown for</label>
+        <select id="status-filter">
+          <option value="">All statuses</option>
+          <option value="open">Open</option>
+          <option value="fixed">Fixed</option>
+          <option value="resolved">Resolved</option>
+          <option value="closed">Closed</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="stat-tiles" class="stat-tile-row"></div>
+
+    <div class="dashboard-chart-card card">
+      <div class="chart-panel">
+        <svg id="donut-chart" viewBox="0 0 240 240" class="donut-svg"></svg>
+      </div>
+      <div class="legend-panel">
+        <h2 class="legend-title">Issues by type</h2>
+        <div id="legend-list" class="legend-list"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QA Agent Hub — Review Pins</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="topnav">
+    <div class="brand">QA Agent Hub</div>
+    <nav>
+      <a href="/dashboard.html">Dashboard</a>
+      <a href="/scrape.html">Scrape</a>
+      <a href="/functional.html">Functional Tests</a>
+      <a href="/issues.html">Issues</a>
+      <a href="/pins.html" class="active">Review Pins</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Review Pins</h1>
+    <p class="muted">Drop a pin directly on any saucedemo.com page to leave a note with a name, description, and severity — right where you noticed it.</p>
+
+    <div class="card bookmarklet-card">
+      <a id="bookmarklet-link"
+         class="btn-primary bookmarklet-btn"
+         href="javascript:void(0);"
+         onclick="return false;">📌 QA Pin</a>
+      <div class="bookmarklet-instructions">
+        <ol>
+          <li>Drag the <strong>📌 QA Pin</strong> button to your browser's bookmarks bar (make sure it's visible — Ctrl+Shift+B in Chrome).</li>
+          <li>Open any <strong>saucedemo.com</strong> page.</li>
+          <li>Click the <strong>📌 QA Pin</strong> bookmark. A small "QA Agent Hub" helper tab will open the first time — leave it open in the background, it's what saves your pins.</li>
+          <li>Click anywhere on the saucedemo page to drop a pin (name, description, severity).</li>
+          <li>Click the bookmark again on that page any time to see the pins you've already left there.</li>
+        </ol>
+        <p class="muted">The button above is deliberately not clickable here — it only works dragged into your bookmarks bar.</p>
+      </div>
+    </div>
+
+    <h2>All saved pins</h2>
+    <div id="pins-list" class="issue-list"></div>
+  </main>
+
+  <script src="/js/pinsManage.js"></script>
+</body>
+</html>

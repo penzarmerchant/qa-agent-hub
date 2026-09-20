@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QA Agent Hub — Functional Tests</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="topnav">
+    <div class="brand">QA Agent Hub</div>
+    <nav>
+      <a href="/dashboard.html">Dashboard</a>
+      <a href="/scrape.html">Scrape</a>
+      <a href="/functional.html" class="active">Functional Tests</a>
+      <a href="/issues.html">Issues</a>
+      <a href="/pins.html">Review Pins</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Functional Tests</h1>
+    <p class="muted">Real browser tests for login, cart, checkout, and error/edge cases. Each test is a sequence of steps — if one fails, you'll see exactly which.</p>
+
+    <div class="card functional-run-card">
+      <div class="run-option-group">
+        <span class="run-option-label">Tests</span>
+        <div id="test-checkboxes" class="checkbox-group"></div>
+      </div>
+      <div class="run-option-group">
+        <span class="run-option-label">Run for</span>
+        <select id="user-select"></select>
+      </div>
+      <button id="run-btn" class="btn-primary">Run</button>
+      <div id="status" class="status-line"></div>
+    </div>
+
+    <h2>Results</h2>
+    <div id="results-list" class="issue-list"></div>
+  </main>
+
+  <script src="/js/functional.js"></script>
+</body>
+</html>
